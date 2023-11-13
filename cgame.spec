@@ -29,5 +29,3 @@ make install DESTDIR=%{buildroot}
 
 
 %changelog
-* Mon Nov 13 2023 First Last <first@example.com> - 1.0-2
-- Initial package
