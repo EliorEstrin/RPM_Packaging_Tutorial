@@ -4,7 +4,7 @@ Release:        2%{?dist}
 Summary:        guess the number game   
 
 License:        GPLv3+
-Source0:        %{name}-%{version}.tar.gz
+Source0:       https://github.com/EliorEstrin/RPM_Packaging_Tutorial/tree/main
 
 BuildRequires:  gcc
 BuildRequires:  make
