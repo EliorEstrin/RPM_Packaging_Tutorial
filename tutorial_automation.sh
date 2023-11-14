@@ -44,6 +44,10 @@ build_package(){
   rpmbuild -bb ~/rpmbuild/SPECS/cgame.spec
 }
 
+install_rpm() {
+  sudo yum install -y ~/rpmbuild/RPMS/x86_64/cgame-1.0.0-1.el7.x86_64.rpm
+}
+
 # Main script execution
 echo "Make sure you are inside the repo folder when you run this script"
 install_packages
@@ -55,5 +59,5 @@ move_spec_file
 bump_spec
 lint_spec
 build_package
-
+install_rpm
 echo "Script execution completed successfully."
