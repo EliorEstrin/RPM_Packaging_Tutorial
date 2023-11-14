@@ -1,6 +1,6 @@
 Name:           cgame
 Version:        1.0.0    
-Release:        1%{?dist}
+Release:        0%{?dist}
 Summary:        guess the number game   
 
 License:        GPLv3+
