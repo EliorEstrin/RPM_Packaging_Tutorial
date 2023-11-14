@@ -4,4 +4,4 @@ clean:
 	rm cgame
 install:
 	mkdir -p $(DESTDIR)/usr/bin
-	install -m 0755 cgame $(DESTDIR)/usr/bin/cgaame
+	install -m 0755 cgame $(DESTDIR)/usr/bin/cgame
