@@ -26,16 +26,20 @@ move_to_rpm_sources() {
 }
 
 move_spec_file(){
+  echo "Performing move_spec_file operation..."
   mv cgame.spec ~/rpmbuild/SPECS/
 }
 
 bump_spec(){
+  echo "Performing bump_spec operation..."
   rpmdev-bumpspec --comment 'Initial package' ~/rpmbuild/SPECS/cgame.spec
 }
 
 lint_spec(){
-  rpmlint ~/rpmbuild/SPECS/cgame.spec 
+  echo "Performing lint_spec operation..."
+  rpmlint ~/rpmbuild/SPECS/cgame.spec
 }
+
 # Main script execution
 echo "Make sure you are inside the repo folder when you run this script"
 install_packages
