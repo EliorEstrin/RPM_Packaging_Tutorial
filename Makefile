@@ -1,6 +1,5 @@
 cgame:
         gcc -g -o cgame cgame.c
-
 clean:
         rm cgame
 install:
