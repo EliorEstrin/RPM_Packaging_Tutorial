@@ -25,6 +25,17 @@ move_to_rpm_sources() {
   mv cgame-1.0.0.tar.gz ~/rpmbuild/SOURCES/
 }
 
+move_spec_file(){
+  mv cgame.spec ~/rpmbuild/SPECS/
+}
+
+bump_spec(){
+  rpmdev-bumpspec --comment 'Initial package' ~/rpmbuild/SPECS/cgame.spec
+}
+
+lint_spec(){
+  rpmlint ~/rpmbuild/SPECS/cgame.spec 
+}
 # Main script execution
 echo "Make sure you are inside the repo folder when you run this script"
 install_packages
@@ -32,5 +43,8 @@ setup_rpm_build
 prepare_game_package
 create_tarball
 move_to_rpm_sources
+move_spec_file
+bump_spec
+lint_spec
 
 echo "Script execution completed successfully."
