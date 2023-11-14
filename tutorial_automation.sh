@@ -40,6 +40,10 @@ lint_spec(){
   rpmlint ~/rpmbuild/SPECS/cgame.spec
 }
 
+build_package(){
+  rpmbuild -bb ~/rpmbuild/SPECS/cgame.spec
+}
+
 # Main script execution
 echo "Make sure you are inside the repo folder when you run this script"
 install_packages
@@ -50,5 +54,6 @@ move_to_rpm_sources
 move_spec_file
 bump_spec
 lint_spec
+build_package
 
 echo "Script execution completed successfully."
